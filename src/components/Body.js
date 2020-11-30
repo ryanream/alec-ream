@@ -4,7 +4,7 @@ const Body = () => {
   return (
     <div className='body-container'>
       {/* Section 1 */}
-      <section className='body-intro'>You believe any of that sh*t?</section>
+      <section className='body-intro'>Accoutrements?</section>
       <section className='section-container'>
         <div className='section-title horizontal-title bg-gradient-orange-right'>
           section-title

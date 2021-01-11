@@ -1,35 +1,45 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import FadeIn from 'react-fade-in';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	return (
-		<Router>
-			<div className='nav-container'>
-				<div className='navbar'>
-					<div>
-						<FadeIn transitionDuration={800}>
-							<details>
-								<summary className='nav-link'>Navigation</summary>
-								<ul className='drop-menu'>
+		// <Router>
+		<div className='nav-container'>
+			<div className='navbar'>
+				<div>
+					<FadeIn transitionDuration={800}>
+						<details>
+							<summary className='nav-link'>Navigation</summary>
+							<ul className='drop-menu'>
+								<Link to='/contact'>
 									<li>Contact </li>
-									<li>Resume </li>
-									<li>And a 3rd</li>
-								</ul>
-							</details>
-						</FadeIn>
-					</div>
-					<div>
-						<FadeIn transitionDuration={800}>
-							<a className='nav-link' href=''>
+								</Link>
+
+								<Link to='/'>
+									<li>Home </li>
+								</Link>
+							</ul>
+						</details>
+					</FadeIn>
+				</div>
+				<div>
+					<FadeIn transitionDuration={800}>
+						<div className='nav-menu'>
+							<a className='nav-link' href='/contact'>
+								Contact
+							</a>{' '}
+							<a className='nav-link' href='/resume'>
 								Résumé
 							</a>
-						</FadeIn>
-					</div>
+						</div>
+					</FadeIn>
 				</div>
-				<div className='nav-border'></div>
-			</div>{' '}
-		</Router>
+			</div>
+			<div className='nav-border'></div>
+		</div>
+		// </Router>
 	);
 };
 
